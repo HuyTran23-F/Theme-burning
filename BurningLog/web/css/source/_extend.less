@@ -1,0 +1,324 @@
+// Extend css slick
+@import "slick.less";
+@import "slick-theme.less";
+
+& when(@media-common = true) {
+    /* Default Style */
+    body {
+        line-height: 20px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .page-main {
+        padding-left: @layout-indent__width;
+        padding-right: @layout-indent__width;
+    }
+
+    .container {
+        padding-right: @layout-indent__width;
+        padding-left: @layout-indent__width;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: -@layout-indent__width;
+        margin-left: -@layout-indent__width;
+        flex-wrap: nowrap;
+    }
+
+    .col {
+        position: relative;
+        padding-right: @layout-indent__width;
+        padding-left: @layout-indent__width;
+        box-sizing: border-box;
+        margin-bottom: @layout-indent__width;
+        width: 100%;
+    }
+    /* End Default Style */
+
+    /* Style guide text title */
+    .style-guide-text {
+        color: @color-gray-darken5;
+        font-family: @font-regular-helveticalight;
+        font-weight: @font-weight__regular;
+        font-size: 30px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    /* End style guide text title */
+
+    /* Style guide header */
+    .style-guide-header {
+        background-color: @color-red13;
+
+        .style-guide-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+
+            .style-guide-logo {
+                border-right: 1px solid @color-red15;
+                padding-right: 50px;
+            }
+
+            .title-style-guide {   
+                padding-left: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                font-family: @font-regular-helveticalight;
+                color: @color-white;
+                line-height: 22px;
+            }
+        }
+    }
+
+    /* Buttons */
+    .btn-button {
+        .action.primary {
+            text-transform: uppercase;
+            padding: 12px 35px 11px 35px;
+        }
+        .action.secondary {
+            text-transform: uppercase;
+            padding: 16px 50px;
+            outline: none;
+        }
+    }
+    
+    /* Buttons */
+   
+    /* Checkbox */
+
+    .style-guide-checkbox div{
+        display: flex;
+        align-items: center;
+    }
+
+    .style-guide-radio div {
+        display: flex;
+        align-items: center;
+    }
+
+    .style-guide-inputs {
+        display: flex;
+
+        .style-guide-checkbox {
+            margin-right: 50px;
+        }
+    }
+
+    input[type="checkbox"] {
+        top: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: @color-white;
+        border: 1px solid @color-gray-darken6;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    input[type="checkbox"]::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f00c';
+        font-weight: 900;
+        color: @color-gray-base3;
+        display: none;
+    }
+    input[type="checkbox"]:checked::after {
+        display: block;
+    }
+
+    label {
+        font-size: 13px;
+        line-height: 30px;
+        color: @color-gray-base2;
+        font-family: @font-regular-roboto;
+        cursor: pointer;
+    }
+
+    /* Radio */
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"] {
+        top: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: @color-white;
+        border: 1px solid @color-gray-darken6;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    input[type="radio"]::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f111';
+        font-weight: 900;
+        color: @color-gray-base3;
+        display: none;
+    }
+
+    input[type="radio"]:checked::after {
+        display: block;
+    }
+
+    /* End Radio */
+
+    /* Input */
+    .sg-input-field {
+        margin-bottom: 10px;
+        width: 320px;
+    }
+
+    /* Mage error */
+
+    .mage-error {
+        font-size: 13px;
+        line-height: 30px;
+        color: @color-red16;
+        font-family: @font-regular-roboto
+    }
+    /* End Mage error */
+
+     /* Navigation */
+    .product.data.items {
+        margin-left: 0;
+        margin-right: 0;
+        .item.title > .switch {
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: @font-regular-roboto;
+            line-height: 20px;
+            margin-top: 0;
+        }
+    }
+     /* End Navigation */
+
+    /* Alert */
+    
+        .message {
+            text-align: center;
+        }
+
+        .success {
+            border: 1px solid;
+        }
+
+        .error {
+            border: 1px solid;
+        }
+    /* End Alert */
+
+    /* Typhography */ 
+    p {
+        font-family: @font-regular-roboto;
+        font-size: 13px;
+        line-height: 20px;
+        color: @color-gray-base2;
+    }
+
+    .style-guide-paragraph {
+        margin-bottom: 27px;
+    }
+    .style-guide-links {
+        margin-bottom: 50px;
+    }
+
+    /* icon */
+    .social {
+        display: flex;
+
+        a.icon {
+            color: @color-gray-base5;
+            text-decoration: none;
+            &:hover {
+                color: @color-black;
+                text-decoration: none;
+            }
+        }
+    }
+    /* end icon */
+
+    /* CMS block */
+    .style-guide-promo {
+        margin-top: 20px;
+
+        .block-promo {
+            display: block;
+            position: relative;
+
+            img {
+                // display: block;
+                width: 100%;
+                // width: 400px;
+            }
+
+            .link-promo {
+                width: fit-content;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid @color-white;
+                padding: 17px 22px;
+                color: @color-white;
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height: 20px;
+                font-family:  @font-roboto-bold;
+                background-color: @color-boder-primary;
+                text-decoration: none;
+
+                .link-promo::after {
+                    content: '';
+                    font-family: "Font Awesome 5 Free";
+                    position: absolute;
+                    color: chartreuse;
+                }
+
+                &:hover {
+                    background-color: @color-gray-base6;
+                }
+            }
+            
+        }
+    }
+    /* End CMS block */
+}
+
+
+// 
+
+// .third-button {
+//     .lib-button(
+//                 @_button-margin: 3px, 
+//                 @_button-font-family: @font-medium-roboto,
+//                 @_button-background: @color-red9
+//             );
+// }
