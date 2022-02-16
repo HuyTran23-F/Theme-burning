@@ -269,6 +269,7 @@
     .style-guide-promo {
         margin-top: 20px;
 
+        
         .block-promo {
             display: block;
             position: relative;
@@ -279,37 +280,41 @@
                 // width: 400px;
             }
 
-            .link-promo {
-                width: fit-content;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                border: 2px solid @color-white;
-                padding: 17px 22px;
-                color: @color-white;
-                text-transform: uppercase;
-                font-size: 15px;
-                line-height: 20px;
-                font-family:  @font-roboto-bold;
-                background-color: @color-boder-primary;
-                text-decoration: none;
-
-                .link-promo::after {
-                    content: '';
-                    font-family: "Font Awesome 5 Free";
+            .banner-btn {
+                   
+                .btn-banner {
+                    width: fit-content;
                     position: absolute;
-                    color: chartreuse;
-                }
-
-                &:hover {
-                    background-color: @color-gray-base6;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid @color-white;
+                    padding: 17px 22px;
+                    color: @color-white;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    line-height: 20px;
+                    font-family:  @font-roboto-bold;
+                    background-color: @color-boder-primary;
+                    text-decoration: none;
+                    .btn-banner::after {
+                        content: '\f054';
+                        font-family: "Font Awesome 5 Free";
+                        font-size: 14px;
+                        margin-left: 11px;
+                    }
+    
+                    &:hover {
+                        background-color: @color-gray-base6;
+                    }
                 }
             }
+           
             
         }
     }
     /* End CMS block */
+ 
 }
 
 

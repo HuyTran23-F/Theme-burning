@@ -12,8 +12,8 @@
         
         <!-- Add -->
         <script src="js/main.js" />
-
-
+        <script src="js/main-banner.js" />
+        
     </head>
     <body>
         
